@@ -8,7 +8,7 @@ import {
   FaCss3Alt, 
   FaReact, 
   FaVue, 
-  FaGolang,
+  FaCode, 
   FaDatabase, 
   FaMobile, 
   FaCode, 
@@ -47,7 +47,7 @@ const Skills = () => {
         { name: "Java", icon: <FaJava />, level: 85 },
         { name: "Python", icon: <FaPython />, level: 80 },
         { name: "JavaScript", icon: <FaJs />, level: 75 },
-        { name: "Go", icon: <FaGolang />, level: 60 },
+        { name: "Go", icon: <FaCode />, level: 60 },
         { name: "SQL", icon: <FaDatabase />, level: 70 }
       ]
     },
