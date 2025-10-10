@@ -49,7 +49,7 @@ This portfolio website showcases:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/RhulaneTheDeveloper/rhulane-portfolio.git
+git clone https://github.com/RhulaneBaloyi/rhulane-portfolio.git
 cd rhulane-portfolio
 ```
 
@@ -95,7 +95,7 @@ To customize this portfolio for your own use:
 - **Email**: rhulanemalcolm@gmail.com
 - **Phone**: +27 63 276 5181
 - **LinkedIn**: [linkedin.com/in/rhulane-baloyi](https://linkedin.com/in/rhulane-baloyi)
-- **GitHub**: [github.com/RhulaneTheDeveloper](https://github.com/RhulaneTheDeveloper)
+- **GitHub**: [github.com/RhulaneBaloyi](https://github.com/RhulaneBaloyi)
 
 ## 🎓 Education
 

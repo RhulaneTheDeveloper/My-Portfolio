@@ -94,7 +94,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <a
-              href="https://github.com/RhulaneTheDeveloper"
+              href="https://github.com/RhulaneBaloyi"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"

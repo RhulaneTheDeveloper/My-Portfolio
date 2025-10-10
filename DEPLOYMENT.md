@@ -58,7 +58,7 @@ Your portfolio is ready to deploy! Here are the steps:
 ## 📝 Important Notes
 
 ### Update GitHub Username
-If your GitHub username is different from "RhulaneTheDeveloper", update these files:
+If your GitHub username is different from "RhulaneBaloyi", update these files:
 
 1. **package.json** (line 12):
    ```json

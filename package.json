@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://rhulanethedeveloper.github.io/rhulane-portfolio",
+  "homepage": "https://rhulanebaloyi.github.io/rhulane-portfolio",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

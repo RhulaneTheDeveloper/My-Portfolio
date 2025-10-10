@@ -38,7 +38,7 @@ const Projects = () => {
         "Team collaboration through Microsoft Teams"
       ],
       liveUrl: "https://rhulane.pythonanywhere.com/",
-      githubUrl: "https://github.com/RhulaneTheDeveloper",
+      githubUrl: "https://github.com/RhulaneBaloyi",
       role: "Full-stack Developer",
       duration: "4-6 months (Final Year Project)",
       lessons: [
