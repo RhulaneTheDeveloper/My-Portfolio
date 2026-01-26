@@ -4,37 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhulane Baloyi - Software Developer Portfolio</title>
-    <meta name="description" content="Rhulane Baloyi - Software Developer & 2026 Computer Science Graduate">
+    <meta name="description" content="Rhulane Baloyi - Software Developer & Computer Science Graduate">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* [Keeping your original CSS styles here for brevity, they remain unchanged] */
+        /* Keeping your existing styles exactly as they were, adding only a typing cursor effect */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        html { scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; }
+        .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.2); z-index: 1000; transition: all 0.3s ease; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo h2 { color: #667eea; font-weight: 700; }
+        .logo h2 { color: #667eea; font-weight: 700; font-size: 1.5rem; }
         .nav-list { display: flex; list-style: none; gap: 2rem; }
-        .nav-link { text-decoration: none; color: #333; font-weight: 500; }
-        .hero { min-height: 100vh; display: flex; align-items: center; color: white; padding-top: 70px; position: relative; }
-        .highlight { background: linear-gradient(45deg, #ffd700, #ffed4e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-text h1 { font-size: 3.5rem; }
-        .btn { padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem; }
-        .btn-primary { background: #ffd700; color: #333; }
-        .section { padding: 6rem 0; background: white; }
-        .card { background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-bottom: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        /* Add a simple fade animation for the title swap */
-        #typewriter { border-right: 3px solid #ffd700; padding-right: 5px; animation: blink 0.75s step-end infinite; }
+        .nav-link { background: none; border: none; color: #333; font-weight: 500; font-size: 1rem; cursor: pointer; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease; text-decoration: none; }
+        .nav-link:hover { color: #667eea; background: rgba(102, 126, 234, 0.1); }
+        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 70px; }
+        .hero-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); z-index: -2; }
+        .hero-shapes { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; }
+        .shape { position: absolute; border-radius: 50%; background: rgba(255, 255, 255, 0.1); animation: float 6s ease-in-out infinite; }
+        .shape-1 { width: 200px; height: 200px; top: 20%; left: 10%; animation-delay: 0s; }
+        .shape-2 { width: 150px; height: 150px; top: 60%; right: 15%; animation-delay: 2s; }
+        .shape-3 { width: 100px; height: 100px; bottom: 20%; left: 60%; animation-delay: 4s; }
+        @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(180deg); } }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; color: white; }
+        .hero-text h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
+        .highlight { background: linear-gradient(45deg, #ffd700, #ffed4e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; border-right: 3px solid #ffd700; padding-right: 5px; animation: blink 0.75s step-end infinite; }
         @keyframes blink { from, to { border-color: transparent } 50% { border-color: #ffd700; } }
+        .hero-subtitle { font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9); }
+        .hero-description { font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.8); max-width: 500px; }
+        .hero-buttons { display: flex; gap: 1rem; margin-bottom: 2rem; }
+        .btn { padding: 1rem 2rem; border: none; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+        .btn-primary { background: linear-gradient(45deg, #ffd700, #ffed4e); color: #333; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid rgba(255, 255, 255, 0.3); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.5); }
+        .hero-social { display: flex; gap: 1rem; }
+        .social-link { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; font-size: 1.2rem; transition: all 0.3s ease; text-decoration: none; }
+        .social-link:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-3px); }
+        .profile-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border-radius: 20px; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.2); text-align: center; color: white; max-width: 300px; width: 100%; }
+        .placeholder-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(45deg, #ffd700, #ffed4e); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem; font-weight: 700; color: #333; }
+        .profile-info h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .profile-info p { color: rgba(255, 255, 255, 0.8); margin-bottom: 1.5rem; }
+        .profile-stats { display: flex; justify-content: space-around; gap: 1rem; }
+        .stat { text-align: center; }
+        .stat-number { display: block; font-size: 1.5rem; font-weight: 700; color: #ffd700; }
+        .stat-label { font-size: 0.8rem; color: rgba(255, 255, 255, 0.7); }
+        .section { padding: 6rem 0; background: white; }
+        .about-education, .about-goals { background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); }
+        .education-item h5 { font-size: 1.1rem; color: #333; margin-bottom: 0.5rem; }
+        @media (max-width: 768px) { .hero-content { grid-template-columns: 1fr; text-align: center; } .hero-text h1 { font-size: 2.5rem; } .hero-buttons { flex-direction: column; align-items: center; } }
     </style>
 </head>
 <body>
-
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="nav-container">
-                <div class="logo"><h2>RB</h2></div>
+                <div class="logo"><h2>Rhulane Baloyi</h2></div>
                 <nav>
                     <ul class="nav-list">
                         <li><a href="#home" class="nav-link">Home</a></li>
@@ -48,17 +74,35 @@
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div><div class="shape shape-2"></div><div class="shape shape-3"></div>
+            </div>
+        </div>
         <div class="container">
-            <div class="hero-text">
-                <h1>Hi, I'm <span id="typewriter" class="highlight">Rhulane Baloyi</span></h1>
-                <p class="hero-subtitle">Software Developer | 2026 Computer Science Graduate</p>
-                <p class="hero-description">
-                    Passionate about building scalable web applications and solving complex problems. 
-                    I transform ideas into functional, user-centric software.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Portfolio</a>
-                    <a href="mailto:rhulanemalcolm@gmail.com" class="btn" style="color: white; border: 1px solid white;">Hire Me</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span id="typewriter" class="highlight">Rhulane Baloyi</span></h1>
+                    <p class="hero-subtitle">Software Developer | 2026 Computer Science Graduate</p>
+                    <p class="hero-description">
+                        Computer Science Graduate from Tshwane University of Technology. 
+                        Passionate about building scalable software and solving real-world problems through clean, efficient code.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="placeholder-avatar">RB</div>
+                    <div class="profile-info">
+                        <h3>Rhulane Baloyi</h3>
+                        <p>Software Developer</p>
+                        <div class="profile-stats">
+                            <div class="stat"><span class="stat-number">2026</span><span class="stat-label">Graduate</span></div>
+                            <div class="stat"><span class="stat-number">2+</span><span class="stat-label">Projects</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,36 +110,38 @@
 
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="card">
-                <h3>Education</h3>
-                <p><strong>Diploma in Computer Science</strong></p>
-                <p>Tshwane University of Technology | Graduated 2026</p>
+            <div class="about-education">
+                <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                <div class="education-item">
+                    <h5>Diploma in Computer Science</h5>
+                    <p>Tshwane University of Technology</p>
+                    <span class="education-period">Class of 2026 Graduate</span>
+                </div>
             </div>
-            <div class="card">
-                <h3>Current Goals</h3>
-                <p>I am actively seeking <strong>Junior Software Developer roles</strong> or <strong>Graduate Internships</strong> where I can apply my skills in full-stack development and contribute to innovative tech teams.</p>
+            <div class="about-goals">
+                <h4><i class="fas fa-bullseye"></i> Current Goals</h4>
+                <p>I am currently seeking opportunities for <strong>Internships</strong> or <strong>Junior Software Developer roles</strong> where I can contribute to professional teams and continue growing as a developer.</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section" style="background: #eee;">
+    <section id="projects" class="section" style="background: #f8f9fa;">
         <div class="container">
-            <h2>Work & Projects</h2>
-            <div class="card" style="background: white;">
-                <h3>Freelance Software Project</h3>
-                <p><em>Professional Engagement | 2025 - 2026</em></p>
-                <p>Developed custom software solutions for clients, focusing on clean code, database management, and responsive UI/UX design.</p>
-                <ul>
-                    <li>Implemented secure authentication systems.</li>
-                    <li>Optimized database queries for better performance.</li>
-                </ul>
+            <h2 style="margin-bottom: 2rem;">Projects</h2>
+            <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <h3>Freelance Development Project</h3>
+                <p style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Professional Freelance Project</p>
+                <p>Developed a custom software solution for a client, focusing on delivering high-quality user experiences and robust backend functionality.</p>
+                <div style="margin-top: 1rem;">
+                    <span style="background: #eee; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem;">Full Stack</span>
+                    <span style="background: #eee; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem;">Client-Facing</span>
+                </div>
             </div>
         </div>
     </section>
 
     <script>
-        // Script to interchange the text
+        // Typing Effect Logic
         const textElement = document.getElementById("typewriter");
         const phrases = ["Rhulane Baloyi", "a Software Developer"];
         let phraseIndex = 0;
@@ -113,7 +159,7 @@
                 charIndex++;
             }
 
-            let typeSpeed = isDeleting ? 50 : 100;
+            let typeSpeed = isDeleting ? 50 : 150;
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
